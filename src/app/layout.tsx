@@ -17,7 +17,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={cn(inter.className, "bg-primary text-primary-foreground")}
+        className={cn(inter.className, "bg-background text-primary-foreground")}
       >
         {children}
       </body>
