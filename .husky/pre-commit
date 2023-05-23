@@ -1,4 +1,9 @@
 #!/usr/bin/env sh
 . "$(dirname -- "$0")/_/husky.sh"
 
-pnpm lint
+pnpm lint-staged
+
+# check typescript
+pnpm tsc --noEmit
+echo ✅ Typescript ok
+
