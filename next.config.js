@@ -1,5 +1,5 @@
-const { withAxiom } = require("next-axiom");
-const { pipe } = require("remeda");
+const { withAxiom } = require('next-axiom');
+const { pipe } = require('remeda');
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
