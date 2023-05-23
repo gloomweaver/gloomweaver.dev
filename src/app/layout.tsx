@@ -1,26 +1,20 @@
-import { cn } from "@/lib/utils";
-import { Inter } from "next/font/google";
-import "@/styles/globals.css";
+import '@/styles/globals.css';
 
-const inter = Inter({ subsets: ["latin"] });
+import { Inter } from 'next/font/google';
+
+import { cn } from '@/lib/utils';
+
+const inter = Inter({ subsets: ['latin'] });
 
 export const metadata = {
-  title: "Kirill Khramkov - Software Engineer",
-  description: "Portfolio site",
+  title: 'Kirill Khramkov - Software Engineer',
+  description: 'Portfolio site',
 };
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
-      <body
-        className={cn(inter.className, "bg-primary text-primary-foreground")}
-      >
-        {children}
-      </body>
+      <body className={cn(inter.className)}>{children}</body>
     </html>
   );
 }
