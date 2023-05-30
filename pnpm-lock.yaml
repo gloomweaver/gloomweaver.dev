@@ -7,6 +7,9 @@ dependencies:
   '@radix-ui/react-navigation-menu':
     specifier: ^1.1.2
     version: 1.1.2(react-dom@18.2.0)(react@18.2.0)
+  '@vercel/analytics':
+    specifier: ^1.0.1
+    version: 1.0.1
   class-variance-authority:
     specifier: ^0.6.0
     version: 0.6.0(typescript@5.0.4)
@@ -14,14 +17,11 @@ dependencies:
     specifier: ^1.2.1
     version: 1.2.1
   framer-motion:
-    specifier: ^10.12.12
-    version: 10.12.12(react-dom@18.2.0)(react@18.2.0)
+    specifier: ^10.12.14
+    version: 10.12.14(react-dom@18.2.0)(react@18.2.0)
   next:
     specifier: 13.4.3
     version: 13.4.3(react-dom@18.2.0)(react@18.2.0)
-  next-axiom:
-    specifier: ^0.17.0
-    version: 0.17.0(next@13.4.3)
   react:
     specifier: 18.2.0
     version: 18.2.0
@@ -316,8 +316,8 @@ packages:
       '@nodelib/fs.scandir': 2.1.5
       fastq: 1.15.0
 
-  /@pkgr/utils@2.4.0:
-    resolution: {integrity: sha512-2OCURAmRtdlL8iUDTypMrrxfwe8frXTeXaxGsVOaYtc/wrUyk8Z/0OBetM7cdlsy7ZFWlMX72VogKeh+A4Xcjw==}
+  /@pkgr/utils@2.4.1:
+    resolution: {integrity: sha512-JOqwkgFEyi+OROIyq7l4Jy28h/WwhDnG/cPkXG2Z1iFbubB6jsHW1NDvmyOzTBxHr3yg68YGirmh1JUgMqa+9w==}
     engines: {node: ^12.20.0 || ^14.18.0 || >=16.0.0}
     dependencies:
       cross-spawn: 7.0.3
@@ -707,6 +707,10 @@ packages:
       eslint-visitor-keys: 3.4.1
     dev: true
 
+  /@vercel/analytics@1.0.1:
+    resolution: {integrity: sha512-Ux0c9qUfkcPqng3vrR0GTrlQdqNJ2JREn/2ydrVuKwM3RtMfF2mWX31Ijqo1opSjNAq6rK76PwtANw6kl6TAow==}
+    dev: false
+
   /acorn-jsx@5.3.2(acorn@8.8.2):
     resolution: {integrity: sha512-rq9s+JNhf0IChjtDXxllJ7g41oZk5SlXtp0LHwyA5cejwn7vKmKp4pPri6YEePv2PU65sAsegbXtIinmDFDXgQ==}
     peerDependencies:
@@ -921,8 +925,8 @@ packages:
     hasBin: true
     dependencies:
       caniuse-lite: 1.0.30001489
-      electron-to-chromium: 1.4.404
-      node-releases: 2.0.11
+      electron-to-chromium: 1.4.405
+      node-releases: 2.0.12
       update-browserslist-db: 1.0.11(browserslist@4.21.5)
     dev: true
 
@@ -1196,8 +1200,8 @@ packages:
     resolution: {integrity: sha512-I88TYZWc9XiYHRQ4/3c5rjjfgkjhLyW2luGIheGERbNQ6OY7yTybanSpDXZa8y7VUP9YmDcYa+eyq4ca7iLqWA==}
     dev: true
 
-  /electron-to-chromium@1.4.404:
-    resolution: {integrity: sha512-te57sWvQdpxmyd1GiswaodKdXdPgn9cN4ht8JlNa04QgtrfnUdWEo1261rY2vaC6TKaiHn0E7QerJWPKFCvMVw==}
+  /electron-to-chromium@1.4.405:
+    resolution: {integrity: sha512-JdDgnwU69FMZURoesf9gNOej2Cms1XJFfLk24y1IBtnAdhTcJY/mXnokmpmxHN59PcykBP4bgUU98vLY44Lhuw==}
     dev: true
 
   /emoji-regex@8.0.0:
@@ -1729,8 +1733,8 @@ packages:
     resolution: {integrity: sha512-MhLuK+2gUcnZe8ZHlaaINnQLl0xRIGRfcGk2yl8xoQAfHrSsL3rYu6FCmBdkdbhc9EPlwyGHewaRsvwRMJtAlA==}
     dev: true
 
-  /framer-motion@10.12.12(react-dom@18.2.0)(react@18.2.0):
-    resolution: {integrity: sha512-DDCqp60U6hR7aUrXj/BXc/t0Sd/U4ep6w/NZQkw898K+u7s+Vv/P8yxq4WTNA86kU9QCsqOgn1Qhz2DpYK0Oag==}
+  /framer-motion@10.12.14(react-dom@18.2.0)(react@18.2.0):
+    resolution: {integrity: sha512-fOl7yuJJyI5Ed7OT/ZieQefhCDFklfvKyIiXFm3TGcLKx0pUBtfRycAdHguAuCNtW/+hq0Mtp82XMVWFifY9Eg==}
     peerDependencies:
       react: ^18.0.0
       react-dom: ^18.0.0
@@ -2276,7 +2280,7 @@ packages:
       object-inspect: 1.12.3
       pidtree: 0.6.0
       string-argv: 0.3.2
-      yaml: 2.2.2
+      yaml: 2.3.0
     transitivePeerDependencies:
       - enquirer
       - supports-color
@@ -2397,16 +2401,6 @@ packages:
     resolution: {integrity: sha512-OWND8ei3VtNC9h7V60qff3SVobHr996CTwgxubgyQYEpg290h9J0buyECNNJexkFm5sOajh5G116RYA1c8ZMSw==}
     dev: true
 
-  /next-axiom@0.17.0(next@13.4.3):
-    resolution: {integrity: sha512-qFdnH50SvRjJUAmNjGIYLcRc4tO/U4R1h9WUuniiwaucXAH5KhL06m7TT3WWD2U1HbulwSfC0R+NlPASOx1XlQ==}
-    engines: {node: '>=15'}
-    peerDependencies:
-      next: ^12.1.4 || ^13
-    dependencies:
-      next: 13.4.3(react-dom@18.2.0)(react@18.2.0)
-      whatwg-fetch: 3.6.2
-    dev: false
-
   /next@13.4.3(react-dom@18.2.0)(react@18.2.0):
     resolution: {integrity: sha512-FV3pBrAAnAIfOclTvncw9dDohyeuEEXPe5KNcva91anT/rdycWbgtu3IjUj4n5yHnWK8YEPo0vrUecHmnmUNbA==}
     engines: {node: '>=16.8.0'}
@@ -2452,8 +2446,8 @@ packages:
       - babel-plugin-macros
     dev: false
 
-  /node-releases@2.0.11:
-    resolution: {integrity: sha512-+M0PwXeU80kRohZ3aT4J/OnR+l9/KD2nVLNNoRgFtnf+umQVFdGBAO2N8+nCnEi0xlh/Wk3zOGC+vNNx+uM79Q==}
+  /node-releases@2.0.12:
+    resolution: {integrity: sha512-QzsYKWhXTWx8h1kIvqfnC++o0pEmpRQA/aenALsL2F4pqNVr7YzcdMlDij5WBnwftRbJCNJL/O7zdKaxKPHqgQ==}
     dev: true
 
   /normalize-path@3.0.0:
@@ -2699,7 +2693,7 @@ packages:
     dependencies:
       lilconfig: 2.1.0
       postcss: 8.4.23
-      yaml: 2.2.2
+      yaml: 2.3.0
 
   /postcss-nested@6.0.1(postcss@8.4.23):
     resolution: {integrity: sha512-mEp4xPMi5bSWiMbsgoPfcP74lsWLHkQbZc3sY+jWYd65CUwXrUaTp0fmNpa01ZcETKlIgUdFN/MpS2xZtqL9dQ==}
@@ -3180,7 +3174,7 @@ packages:
     resolution: {integrity: sha512-L1dapNV6vu2s/4Sputv8xGsCdAVlb5nRDMFU/E27D44l5U6cw1g0dGd45uLc+OXjNMmF4ntiMdCimzcjFKQI8Q==}
     engines: {node: ^14.18.0 || >=16.0.0}
     dependencies:
-      '@pkgr/utils': 2.4.0
+      '@pkgr/utils': 2.4.1
       tslib: 2.5.2
     dev: true
 
@@ -3355,10 +3349,6 @@ packages:
   /util-deprecate@1.0.2:
     resolution: {integrity: sha512-EPD5q1uXyFxJpCrLnCc1nHnq3gOa6DZBocAIiI2TaSCA7VCJ1UJDMagCzIkXNsUYfD1daK//LTEQ8xiIbrHtcw==}
 
-  /whatwg-fetch@3.6.2:
-    resolution: {integrity: sha512-bJlen0FcuU/0EMLrdbJ7zOnW6ITZLrZMIarMUVmdKtsGvZna8vxKYaexICWPfZ8qwf9fzNq+UEIZrnSaApt6RA==}
-    dev: false
-
   /which-boxed-primitive@1.0.2:
     resolution: {integrity: sha512-bwZdv0AKLpplFY2KZRX6TvyuN7ojjr7lwkg6ml0roIy9YeuSr7JS372qlNW18UQYzgYK9ziGcerWqZOmEn9VNg==}
     dependencies:
@@ -3428,9 +3418,9 @@ packages:
     resolution: {integrity: sha512-3wdGidZyq5PB084XLES5TpOSRA3wjXAlIWMhum2kRcv/41Sn2emQ0dycQW4uZXLejwKvg6EsvbdlVL+FYEct7A==}
     dev: true
 
-  /yaml@2.2.2:
-    resolution: {integrity: sha512-CBKFWExMn46Foo4cldiChEzn7S7SRV+wqiluAb6xmueD/fGyRHIhX8m14vVGgeFWjN540nKCNVj6P21eQjgTuA==}
-    engines: {node: '>= 14'}
+  /yaml@2.3.0:
+    resolution: {integrity: sha512-8/1wgzdKc7bc9E6my5wZjmdavHLvO/QOmLG1FBugblEvY4IXrLjlViIOmL24HthU042lWTDRO90Fz1Yp66UnMw==}
+    engines: {node: '>= 14', npm: '>= 7'}
 
   /yocto-queue@0.1.0:
     resolution: {integrity: sha512-rVksvsnNCdJ/ohGc6xgPwyN8eheCxsiLM8mxuE/t/mOVqJewPuO1miLpTHQiRgTKCLexL4MeAFVagts7HmNZ2Q==}

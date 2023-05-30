@@ -1,4 +1,3 @@
-const { withAxiom } = require('next-axiom');
 const { pipe } = require('remeda');
 
 /** @type {import('next').NextConfig} */
@@ -8,6 +7,6 @@ const nextConfig = {
   },
 };
 
-const setupPlugins = (nextConfig) => pipe(nextConfig, withAxiom);
+const setupPlugins = (nextConfig) => pipe(nextConfig);
 
 module.exports = setupPlugins(nextConfig);

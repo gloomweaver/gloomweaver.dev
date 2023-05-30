@@ -1,5 +1,6 @@
 import '@/styles/globals.css';
 
+import { Analytics } from '@vercel/analytics/react';
 import { Inter } from 'next/font/google';
 
 import { Navbar } from '@/app/navbar';
@@ -18,6 +19,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <body className={cn(inter.className, 'dark:bg-stone-900 text-white')}>
         <Navbar />
         {children}
+        <Analytics />
       </body>
     </html>
   );
