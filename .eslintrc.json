@@ -1,24 +1,20 @@
 {
-  "extends": [
-    "eslint:recommended",
-    "plugin:react/recommended",
-    "next/core-web-vitals",
-    "plugin:@typescript-eslint/recommended",
-    "plugin:tailwindcss/recommended",
-    "prettier"
-  ],
+  "extends": ["eslint:recommended", "plugin:react/recommended", "next/core-web-vitals", "prettier"],
   "plugins": ["@typescript-eslint", "simple-import-sort"],
   "overrides": [
     {
-      "files": ["*.ts", "*.tsx", "*.js", "*.jsx"],
-      "parser": "@typescript-eslint/parser"
+      "files": ["*.ts", "*.tsx"],
+      "parser": "@typescript-eslint/parser",
+      "extends": ["plugin:@typescript-eslint/recommended"],
+      "rules": {
+        "no-unused-vars": "off",
+        "@typescript-eslint/no-unused-vars": "error"
+      }
     }
   ],
   "rules": {
     "simple-import-sort/imports": "error",
-    "simple-import-sort/exports": "error",
-    "no-unused-vars": "off",
-    "@typescript-eslint/no-unused-vars": "error"
+    "simple-import-sort/exports": "error"
   },
   "root": true
 }
