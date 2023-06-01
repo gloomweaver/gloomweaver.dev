@@ -33,23 +33,17 @@ const NavLink: React.FC<{ link: LinkItem }> = ({ link }) => {
   const isActive = path === link.href;
 
   return (
-    <NavigationMenu.Item
-      className={cn(
-        'relative',
-        !isActive && 'focus-within:outline focus-within:outline-1 focus-within:outline-white hover:opacity-50'
-      )}
-      key={link.href}
-    >
+    <NavigationMenu.Item className={cn('relative', !isActive && 'hover:opacity-50')} key={link.href}>
       {isActive && (
         <motion.div
           layoutId="pill"
-          className={cn('absolute inset-0 rounded-full bg-white mix-blend-exclusion')}
+          className={cn('absolute inset-0 z-10 rounded-full bg-white mix-blend-exclusion')}
           style={{ borderRadius: '9999px' }}
         />
       )}
       <Link href={link.href} legacyBehavior passHref>
         <NavigationMenu.Link
-          className={cn('px-3 py-2 focus:outline-none')}
+          className={cn('z-10 px-3 py-2 focus:outline focus:outline-orange-700')}
           active={isActive}
           tabIndex={isActive ? -1 : undefined}
         >
